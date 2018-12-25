@@ -1,27 +1,145 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ucitavanje podataka</title>
   <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            background-image: url("slika2.jpg");
+            background-size: cover;
+            width: 100%;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            position: fixed;
+            width: 100%;
+            top: -10px;
+        }
+        nav {
+            background: -webkit-linear-gradient(left, green, red);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            opacity: 0.9;
+        }
+        header nav a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+        }
+        header nav a:hover {
+            color: white;
+            background: -webkit-linear-gradient(crimson, red);
+        }
+        main {
+            padding-top: 315px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 130px;
+          
+        }
+        h1 {
+            color: darkred;
+        }
+
+        label {
+            font-size: 18px;
+            color: green;
+            margin-top: 2%;
+            margin-bottom: 7px;
+        }
+        #rezultat {
+            background-color: white;
+            opacity: 0.8;
+            width: 80%;
+            
+        }
+        footer {
+            padding-left: 10%;
+        }
+        @media (min-width: 600px){
+            main {
+                padding-top: 290px;
+                text-align: center;
+            }
+            h1 {
+                color: darkred;
+            }
+            label {
+                font-size: 18px;
+                color: green;
+                margin-top: 2%;
+                margin-bottom: 7px;
+            }
+            #rezultat{
+                margin: auto;
+            }
+            footer {
+                text-align: center;
+                width: 100%;
+                background: -webkit-linear-gradient(left, red, green);
+                color: white;
+                opacity: 0.9;
+                margin-bottom: -10px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                padding-left: 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div>
+            <img src="http://gigiradics.com/wp-content/uploads/2015/04/deezer-logo-circle.png" height="50"/>
+            <h2>Deezer</h2>
+        </div>
+        <nav>
+            <a href="index.html" target="_blank">Trazi tekst pesme</a>
+            <a href="sugestije.html" target="_blank">Nadji pesmu i izvodjaca</a>
+        </nav>
+        </header>
+   
+    <main>
+        <div>
+            <h1>Pronadji tekst pesme</h1>
 
-  <h1>Pronadji tekst pesme</h1>
+            <label for="izvodjac">Naziv izvodjaca: </label>
+            <input id="izvodjac">
 
-  <label for="izvodjac">Naziv izvodjaca: </label>
-  <input id="izvodjac">
+            <label for="pesma">Naziv pesme:</label>
+            <input id="pesma">
 
-  <label for="pesma">Naziv pesme:</label>
-  <input id="pesma">
+            <p><button id="potrazi">Potrazi</button></p>
 
-  <p><button id="potrazi">Potrazi</button></p>
+            <div>
+                <h2 id="naslov"></h2>
+                <p id="rezultat"></p>
+            </div>
+        </div>
+        
 
-  <div>
-    <h2 id="naslov"></h2>
-    <p id="rezultat"></p>
-  </div>
+    </main>
+    <footer>
+        <div>
+            <img src="http://gigiradics.com/wp-content/uploads/2015/04/deezer-logo-circle.png" height="50" />
+            <h2>Deezer</h2>
+            <p>&copy; Design by Dusan Randjelovic</p>
+        </div>
+
+    
+        </footer>
+    
 
   <script src="main.js"></script>
 </body>

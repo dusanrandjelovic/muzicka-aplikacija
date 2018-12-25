@@ -1,24 +1,128 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sugestije pesama</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            background-image: url("sliak3.jpg");
+            background-size: cover;
+            width: 100%;
+            min-height: 100vh;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            position: fixed;
+            width: 100%;
+            top: -10px;
+        }
+
+        nav {
+            background-color: green;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            opacity: 0.9;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 14px;
+            font-weight: 700;
+        }
+
+            header nav a:hover {
+                color: white;
+                background-color: red;
+            }
+        main {
+            padding-top: 315px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-bottom: 130px;
+        }
+
+        /*#rezultat {
+            background-color: white;
+            opacity: 0.8;
+            width: 95%;
+            padding: 1%;
+        }*/
+        footer {
+            padding-left: 10%;
+        }
+        @media (min-width: 600px){
+            main {
+                padding-bottom: 250px;
+            }
+                .poz {
+                    background: -webkit-linear-gradient(left, red, green);
+                    width: 35%;
+                    padding: 16px;
+                    opacity: 0.8;
+                }
+            footer {
+                text-align: center;
+                width: 100%;
+                background: -webkit-linear-gradient(left, red, green);
+                color: white;
+                opacity: 0.9;
+                padding-top: 9px;
+                padding-left: 0;
+                padding-bottom: -32px;
+                margin-bottom: -12px;
+                height: 180px;
+            }
+
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div>
+            <img src="http://gigiradics.com/wp-content/uploads/2015/04/deezer-logo-circle.png" height="50" />
+            <h2>Deezer</h2>
+        </div>
+        <nav>
+            <a href="index.html" target="_blank">Trazi tekst pesme</a>
+            <a href="sugestije.html" target="_blank">Nadji pesmu i izvodjaca</a>
+        </nav>
+    </header>
 
-  <h1>Pronadji pesmu</h1>
+    <main>
+        <div class="poz">
+            <h1>Pronadji pesmu</h1>
+            <form id="forma">
+                <label for="fraza">Unesite trazeni pojam: </label>
+                <input id="fraza">
+                <button id="dugme">Potrazi</button>
+            </form>
+        </div>
+        
+        <img id="loader" src="slike/loader.gif" alt="loading..." style="display: none">
+        <div id="rezultat"></div>
 
-  <form id="forma">
-    <label for="fraza">Unesite trazeni pojam: </label>
-    <input id="fraza">
-    <button id="dugme">Potrazi</button>
-  </form>
+    </main>
+    
 
-  <img id="loader" src="slike/loader.gif" alt="loading..." style="display: none">
+    <footer>
+        <div>
+            <img src="http://gigiradics.com/wp-content/uploads/2015/04/deezer-logo-circle.png" height="50" />
+            <h2>Deezer</h2>
+            <p>&copy; Design by Dusan Randjelovic</p>
+        </div>
+    </footer>
 
-  <div id="rezultat"></div>
-
-  <script src="sugestije.js"></script>
+    <script src="sugestije.js"></script>
 </body>
 </html>
