@@ -13,6 +13,7 @@
             width: 100%;
             min-height: 100vh;
             color: white;
+            background-attachment: fixed;
         }
 
         header {
@@ -24,14 +25,29 @@
             position: fixed;
             width: 100%;
             top: -10px;
+            z-index: 3;
+        }
+        header div {
+          background-image: url("pokloni2.jpg");
+          background-size: cover;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: -9px;
         }
 
+      header div h2 {
+        margin-left: 1%;
+      }
         nav {
-            background-color: green;
+            background: -webkit-linear-gradient(left, green, red);
             width: 100%;
             display: flex;
             justify-content: center;
             opacity: 0.9;
+            flex-wrap: wrap;
+            margin-top: -1px;
         }
 
         header nav a {
@@ -43,25 +59,76 @@
 
             header nav a:hover {
                 color: white;
-                background-color: red;
+                background: -webkit-linear-gradient(crimson, red);
             }
         main {
             padding-top: 315px;
             padding-left: 10%;
             padding-right: 10%;
             padding-bottom: 130px;
+            z-index: 1;
         }
-
-        /*#rezultat {
+        .poz {
+            background: -webkit-linear-gradient(left, red, green);
+            opacity: 0.9;
+            padding: 8px;
+          }
+        #rezultat {
             background-color: white;
-            opacity: 0.8;
-            width: 95%;
-            padding: 1%;
-        }*/
+            opacity: 0.9;
+            width: 100%;
+           color: black;
+           text-align: center;
+        }
         footer {
             padding-left: 10%;
+            background: -webkit-linear-gradient(left, red, green);
+            opacity: 0.9;
+            height: 150px;
+            padding-top: 9px;
         }
-        @media (min-width: 600px){
+        button {
+          border: 2px solid green;
+          color: green;
+          padding: 7px;
+          font-weight: bold;
+          background-color: white;
+          letter-spacing: 0.02em;
+          border-radius: 4px;
+
+          margin-top: 15px;
+        }
+        button:hover {
+          border: 2px solid red;
+          color: red;
+          text-transform: uppercase;
+          cursor: pointer;
+          font-weight: bold;
+          background-color: white;
+          letter-spacing: 0.02em;
+        }
+        @media (min-width: 800px){
+          header {
+            flex-direction: row;
+            padding-left: 6%;
+            padding-right: 6%;
+            background: -webkit-linear-gradient(left, green, red);
+            background-size: cover;
+            width: 100%;
+            top: -15px;
+          }
+          header div {
+            background-image: none;
+            display: flex;
+            width: 50%;
+            justify-content: flex-start;
+          }
+
+          nav {
+            background: none;
+            width: 57%;
+          margin-top: 0;
+          }
             main {
                 padding-bottom: 250px;
             }
@@ -71,6 +138,10 @@
                     padding: 16px;
                     opacity: 0.8;
                 }
+                #rezultat {
+                 opacity: 0.8;
+                }
+
             footer {
                 text-align: center;
                 width: 100%;
@@ -81,7 +152,7 @@
                 padding-left: 0;
                 padding-bottom: -32px;
                 margin-bottom: -12px;
-                height: 180px;
+              height: 150px;
             }
 
         }
@@ -90,7 +161,7 @@
 <body>
     <header>
         <div>
-            <img src="http://gigiradics.com/wp-content/uploads/2015/04/deezer-logo-circle.png" height="50" />
+            <img src="http://gigiradics.com/wp-content/uploads/2015/04/deezer-logo-circle.png" height="50" style="padding-top: 6px;"/>
             <h2>Deezer</h2>
         </div>
         <nav>
@@ -108,12 +179,12 @@
                 <button id="dugme">Potrazi</button>
             </form>
         </div>
-        
+
         <img id="loader" src="slike/loader.gif" alt="loading..." style="display: none">
         <div id="rezultat"></div>
 
     </main>
-    
+
 
     <footer>
         <div>
